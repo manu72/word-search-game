@@ -94,4 +94,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Credits
 
 Developed by Suleiman
+
 Version 1.0.0
