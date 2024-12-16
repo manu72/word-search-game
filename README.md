@@ -2,6 +2,15 @@
 
 A modern, mobile-friendly word search puzzle game built with JavaScript. Find words in any direction (horizontal, vertical, or diagonal) by selecting letters in sequence.
 
+![chrome_LfU0yncQ07](https://github.com/user-attachments/assets/c0977213-5cca-4b20-b1d0-df989d820ef5)
+
+![chrome_3VPSwgVj83](https://github.com/user-attachments/assets/a920d7eb-7269-4966-8c1a-0be83e8c1dbe)
+
+
+https://github.com/user-attachments/assets/087223ca-a835-4fae-9a63-4017a54ef9f1
+
+
+
 ## Features
 
 - 🎮 Multiple categories (Animals, Countries, Fruits, Sports)
