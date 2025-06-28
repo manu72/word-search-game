@@ -1,0 +1,42 @@
+{
+  "name": "CamWords - Word Search Game",
+  "short_name": "CamWords",
+  "description": "A fun word search game for Camille's birthday!",
+  "version": "1.0.1",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iNDAiIGZpbGw9InVybCgjZ3JhZGllbnQwXzFfNSkiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgM0gyMVYyMUgzVjNaIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSI2IiBjeT0iNiIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjYiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGNpcmNsZSBjeD0iMTgiIGN5PSI2IiByPSIxIiBmaWxsPSIjZmZmZmZmIi8+CjxjaXJjbGUgY3g9IjYiIGN5PSIxMiIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxIiBmaWxsPSIjZmZmZmZmIi8+CjxjaXJjbGUgY3g9IjE4IiBjeT0iMTIiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGN%pcmNsZSBjeD0iNiIgY3k9IjE4IiByPSIxIiBmaWxsPSIjZmZmZmZmIi8+CjxjaXJjbGUgY3g9IjEyIiBjeT0iMTgiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGN%cmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4KPC9zdmc%KPGRlZnM%CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwXzFfNSIgeDE9IjAiIHkxPSIwIiB4Mj0iMTkyIiB5Mj0iMTkyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI%CjxzdG9wIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOTMzM2VhIi8%CjwvbGluZWFyR3JhZGllbnQ%CjwvZGVmcz4KPC9zdmc%",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTA0IiBmaWxsPSJ1cmwoI2dyYWRpZW50MF8xXzUpIi8+CjxzdmcgeD0iMTI4IiB5PSIxMjgiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiPgo8cGF0aCBkPSJNMyAzSDIxVjIxSDNWM1oiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxjaXJjbGUgY3g9IjYiIGN5PSI2IiByPSIxIiBmaWxsPSIjZmZmZmZmIi8+CjxjaXJjbGUgY3g9IjEyIiBjeT0iNiIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxOCIgY3k9IjYiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGN%cmNsZSBjeD0iNiIgY3k9IjEyIiByPSIxIiBmaWxsPSIjZmZmZmZmIi8%CjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGN%cmNsZSBjeD0iMTgiIGN5PSIxMiIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSI2IiBjeT0iMTgiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz4KPGN%cmNsZSBjeD0iMTIiIGN5PSIxOCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8Y2lyY2xlIGN4PSIxOCIgY3k9IjE4IiByPSIxIiBmaWxsPSIjZmZmZmZmIi8%CjwvZz4KPGRlZnM%CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwXzFfNSIgeDE9IjAiIHkxPSIwIiB4Mj0iNTEyIiB5Mj0iNTEyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI%CjxzdG9wIHN0b3AtY29sb3I9IiMzYjgyZjYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOTMzM2VhIi8%CjwvbGluZWFyR3JhZGllbnQ%CjwvZGVmcz4KPC9zdmc%",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Game",
+      "short_name": "New Game",
+      "description": "Start a new word search game",
+      "url": "/",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMjAiIGZpbGw9IiMzYjgyZjYiLz4KPHN2ZyB4PSIyNCIgeT0iMjQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHN0cmVja2UgZD0iTTMgM0gyMVYyMUgzVjNaIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMTIgOFYxNk0xNiAxMkg4IDEyIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4KPC9zdmc%KPC9zdmc%",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
