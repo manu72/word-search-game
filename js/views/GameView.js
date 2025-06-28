@@ -49,8 +49,19 @@ export class GameView {
       return [];
     }
 
+    // Filter words that can fit in the grid (max length = grid size)
+    const validWords = categoryWords.filter(word => word.length <= this.difficulty.size);
+    
+    // Check if we have enough valid words for this difficulty
+    if (validWords.length < this.difficulty.wordCount) {
+      console.warn(`Not enough valid words in category '${this.category}' for ${this.difficulty.size}x${this.difficulty.size} grid. Found ${validWords.length}, need ${this.difficulty.wordCount}`);
+      // Use all available valid words if we don't have enough
+      const shuffled = [...validWords].sort(() => Math.random() - 0.5);
+      return shuffled;
+    }
+
     // Shuffle and get random words based on difficulty
-    const shuffled = [...categoryWords].sort(() => Math.random() - 0.5);
+    const shuffled = [...validWords].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, this.difficulty.wordCount);
   }
 
@@ -688,7 +699,8 @@ export class GameView {
 
   handleWin() {
     setTimeout(() => {
-      alert("🎉 Congratulations! You found all the words!");
+      const { message } = this.app.config.getWinMessage();
+      alert(message);
       this.destroy();
       this.app.showView("menu");
     }, 500);
