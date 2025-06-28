@@ -1,6 +1,8 @@
-# Word Search Game
+# CamWords - Word Search Game
 
-A modern, cross-platform word search puzzle game built with vanilla JavaScript ES6+ modules. Features intelligent word placement, multi-directional word finding, and comprehensive mobile optimization. Find words in 8 directions by selecting letters with mouse or touch interactions.
+🎮 **[Play CamWords Now!](https://manu72.github.io/word-search-game/)** 🎮
+
+A modern Progressive Web App (PWA) word search puzzle game built with vanilla JavaScript ES6+ modules. Created as a special birthday gift for Camille! Features intelligent word placement, multi-directional word finding, offline gameplay, and comprehensive mobile optimization. Find words in 8 directions by selecting letters with mouse or touch interactions.
 
 ![chrome_LfU0yncQ07](https://github.com/user-attachments/assets/c0977213-5cca-4b20-b1d0-df989d820ef5)
 
@@ -14,13 +16,14 @@ https://github.com/user-attachments/assets/087223ca-a835-4fae-9a63-4017a54ef9f1
 ## ✨ Features
 
 ### 🎮 Core Gameplay
-- **6 Word Categories**: Animals, Countries, Fruits, Sports, Colors, Food (20 words each)
+- **6 Word Categories**: Animals, Countries, Fruits, Sports, Colors, Food (90+ words each)
 - **3 Difficulty Levels**: Easy (8x8), Medium (10x10), Hard (12x12) with varying time limits
 - **8-Direction Word Search**: Horizontal, vertical, and diagonal in all directions
 - **Smart Word Placement**: Advanced algorithm prevents overlaps and ensures solvable puzzles
 - **Real-time Selection**: Visual feedback for word selection with straight-line validation
 - **Timer-based Gameplay**: Countdown timer with varying time limits per difficulty
 - **Hint System**: 3 hints per game with temporary word highlighting
+- **Progressive Web App**: Install on any device for offline gameplay
 
 ### 🎨 User Interface
 - **Modern Dark Theme**: Gradient backgrounds and premium visual design
@@ -33,6 +36,12 @@ https://github.com/user-attachments/assets/087223ca-a835-4fae-9a63-4017a54ef9f1
 - **Sound Effects**: Click, word-found, word-try, win sounds
 - **Focus Management**: Intelligent audio handling when switching tabs
 - **Audio Settings**: Toggle sound effects on/off with persistent preferences
+
+### 📱 Progressive Web App Features
+- **Offline Gameplay**: Play anywhere, anytime with service worker caching
+- **Install to Device**: Add to home screen on mobile and desktop
+- **App-like Experience**: Full-screen standalone mode
+- **Fast Loading**: Optimized caching for instant startup
 
 ### ⚙️ Settings & Persistence
 - **Persistent Settings**: Sound preferences saved via localStorage
@@ -52,13 +61,21 @@ https://github.com/user-attachments/assets/087223ca-a835-4fae-9a63-4017a54ef9f1
 5. **Beat the Clock**: Find all words before time runs out to win!
 
 ### Difficulty Settings
-- **Easy**: 8×8 grid, 4 words, 5 minutes
-- **Medium**: 10×10 grid, 6 words, 4 minutes  
-- **Hard**: 12×12 grid, 8 words, 3 minutes
+- **Easy**: 8×8 grid, 6 words, 5 minutes
+- **Medium**: 10×10 grid, 8 words, 4 minutes  
+- **Hard**: 12×12 grid, 10 words, 3 minutes
 
 ## 🚀 Getting Started
 
-### Quick Start
+### 🎮 Play Instantly
+📱 **[Play CamWords Online](https://manu72.github.io/word-search-game/)** - No download required!
+
+### 📲 Install as App
+1. **Visit the game URL** on any device
+2. **Add to Home Screen** (mobile) or **Install App** (desktop)
+3. **Play Offline** anytime, anywhere!
+
+### 🛠️ Local Development
 1. **Download or Clone**: Get the project files to your local machine
 2. **Open in Browser**: Open `index.html` in any modern web browser
 3. **Start Playing**: No build process required - runs directly in the browser
@@ -85,6 +102,8 @@ Then visit `http://localhost:8000` in your browser.
 ```
 Word-Search-Game/
 ├── index.html              # Main HTML file
+├── manifest.json           # PWA manifest for app installation
+├── sw.js                   # Service worker for offline support
 ├── assets/sounds/          # Audio files (MP3 format)
 ├── js/
 │   ├── main.js            # Entry point with Cordova support
@@ -109,7 +128,8 @@ Word-Search-Game/
 - **Typography**: Google Fonts (Poppins)
 - **Storage**: LocalStorage API
 - **Audio**: Web Audio API
-- **Mobile**: Apache Cordova ready
+- **PWA**: Service Worker, Web App Manifest
+- **Mobile**: Apache Cordova ready, Touch optimized
 
 ### Key Features Implementation
 - **MVC Architecture**: Clean separation between views, logic, and data
@@ -117,6 +137,8 @@ Word-Search-Game/
 - **Responsive Grid**: CSS Grid with Tailwind utilities
 - **Touch Events**: Full mobile gesture support
 - **State Management**: Centralized configuration and settings
+- **Service Worker**: Offline caching and PWA functionality
+- **Web App Manifest**: Native app-like installation and experience
 
 ## ✏️ Customization
 
@@ -207,23 +229,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🏆 Credits
 
-**Developer**: Suleiman  
-**Version**: 1.0.0  
-**Year**: 2024
+**Developer**: Manu + Claude  
+**Version**: 1.0.1  
+**Year**: 2025  
+**Special Thanks**: Created as a birthday gift for Camille!
 
 ### Technologies & Resources
 - **JavaScript ES6+** - Core functionality
 - **Tailwind CSS** - Styling framework
 - **Google Fonts** - Poppins typography
 - **Web Audio API** - Sound effects
+- **Service Worker** - Offline functionality
+- **Web App Manifest** - PWA installation
 - **Apache Cordova** - Mobile app framework
 
 ---
 
 <div align="center">
 
-**Enjoy playing Word Search Game!** 🎯
+**Enjoy playing CamWords!** 🎯🎂
 
-[Report Issues](https://github.com/yourusername/word-search-game/issues) • [Request Features](https://github.com/yourusername/word-search-game/issues) • [View Source](https://github.com/yourusername/word-search-game)
+[Report Issues](https://github.com/manu72/word-search-game/issues) • [Request Features](https://github.com/manu72/word-search-game/issues) • [View Source](https://github.com/manu72/word-search-game)
 
 </div>
