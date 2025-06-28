@@ -34,7 +34,9 @@ export class GameView {
 
     this.render();
     this.addEventListeners();
-    this.startTimer();
+    if (this.app.config.settings.timeLimit) {
+      this.startTimer();
+    }
   }
 
   generateWords() {
@@ -203,12 +205,10 @@ export class GameView {
 
                 <!-- Stats Bar -->
                 <div class="flex justify-between items-center py-1 px-3 text-sm font-bold text-white bg-gray-700">
-                    <div>Time: <span id="timer">${Math.floor(
-                      this.timeLeft / 60
-                    )}:${String(this.timeLeft % 60).padStart(
-      2,
-      "0"
-    )}</span></div>
+                    <div>Time: <span id="timer">${this.app.config.settings.timeLimit ? 
+                        `${Math.floor(this.timeLeft / 60)}:${String(this.timeLeft % 60).padStart(2, "0")}` : 
+                        "No Limit"
+                    }</span></div>
                     <div>Tries: <span id="tries">${this.tries}</span></div>
                     <div>Found: <span id="foundCount">${this.foundWords.size}/${
       this.words.length
@@ -465,6 +465,8 @@ export class GameView {
   }
 
   startTimer() {
+    if (!this.app.config.settings.timeLimit) return;
+    
     this.timer = setInterval(() => {
       this.timeLeft--;
       const timerElement = this.container.querySelector("#timer");
