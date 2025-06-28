@@ -16,7 +16,7 @@ export class MainMenuView {
             <div class="flex flex-col items-center justify-center min-h-screen p-3">
                 <div class="w-full max-w-md">
                     <h1 class="text-4xl sm:text-5xl font-extrabold text-center mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                        CamWord
+                        CamWords 🎉
                     </h1>
                     <p class="text-center text-gray-400 text-sm mb-4">Select a category to start playing</p>
                     
