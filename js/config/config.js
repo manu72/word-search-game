@@ -400,7 +400,7 @@ export class Config {
         "CROSSCOUNTRY",
         "TELEMARK",
       ],
-      colors: [
+      colours: [
         "RED",
         "BLUE",
         "GREEN",
@@ -644,11 +644,20 @@ export class Config {
 
     this.credits = {
       version: "1.0.1",
-      developer: "Manu + Claude",
+      developer: "Manu and the Little Chef",
       year: "2025",
       technologies: ["HTML5", "JavaScript", "Tailwind CSS", "Apache Cordova"],
       description: "A fun word search game for Camille on her 32nd birthday!",
       repository: "https://github.com/manu72/word-search-game",
+    };
+
+    this.birthday = {
+      date: "2025-07-05",
+      name: "Camille",
+      specialMessageFrequency: {
+        min: 3,
+        max: 9
+      }
     };
 
     this.loadFromStorage();
@@ -671,5 +680,61 @@ export class Config {
 
   getDifficulty() {
     return this.difficulties[this.settings.difficulty];
+  }
+
+  getCompletionData() {
+    const saved = localStorage.getItem("wordSearchCompletions");
+    if (saved) {
+      return JSON.parse(saved);
+    }
+    return {
+      count: 0,
+      nextSpecialMessage: this.getRandomSpecialMessageTrigger()
+    };
+  }
+
+  saveCompletionData(data) {
+    localStorage.setItem("wordSearchCompletions", JSON.stringify(data));
+  }
+
+  getRandomSpecialMessageTrigger() {
+    const { min, max } = this.birthday.specialMessageFrequency;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  getDaysUntilBirthday() {
+    const today = new Date();
+    const birthdayParts = this.birthday.date.split('-');
+    const birthdayYear = parseInt(birthdayParts[0]);
+    const birthdayMonth = parseInt(birthdayParts[1]) - 1; // Month is 0-indexed
+    const birthdayDay = parseInt(birthdayParts[2]);
+    
+    let birthdayThisYear = new Date(today.getFullYear(), birthdayMonth, birthdayDay);
+    
+    // If birthday has already passed this year, calculate for next year
+    if (birthdayThisYear < today) {
+      birthdayThisYear = new Date(today.getFullYear() + 1, birthdayMonth, birthdayDay);
+    }
+    
+    const timeDiff = birthdayThisYear.getTime() - today.getTime();
+    return Math.ceil(timeDiff / (1000 * 3600 * 24));
+  }
+
+  getWinMessage() {
+    const completionData = this.getCompletionData();
+    completionData.count++;
+    
+    let message = "🎉 Congratulations! You found all the words!";
+    let isSpecialMessage = false;
+    
+    if (completionData.count >= completionData.nextSpecialMessage) {
+      const daysUntil = this.getDaysUntilBirthday();
+      message = `🎉 Congratulations! You found all the words! Did you know that it is only ${daysUntil} days until ${this.birthday.name}'s birthday?`;
+      completionData.nextSpecialMessage = completionData.count + this.getRandomSpecialMessageTrigger();
+      isSpecialMessage = true;
+    }
+    
+    this.saveCompletionData(completionData);
+    return { message, isSpecialMessage };
   }
 }
