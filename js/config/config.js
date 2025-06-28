@@ -49,9 +49,9 @@ export class Config {
         "APPLE",
         "BANANA",
         "ORANGE",
-        "GRAPE",
+        "GRAPES",
         "MANGO",
-        "KIWI",
+        "KIWIFRUIT",
         "LEMON",
         "PEACH",
         "PEAR",
@@ -63,7 +63,7 @@ export class Config {
         "FIG",
         "LIME",
         "GUAVA",
-        "DATES",
+        "CALAMANSI",
         "BERRY",
         "APRICOT",
       ],
@@ -157,6 +157,7 @@ export class Config {
       difficulty: "easy",
       theme: "dark",
       sound: true,
+      timeLimit: true,
     };
 
     this.credits = {

@@ -50,6 +50,19 @@ export class SettingsPopup {
                             </div>
                         </label>
                     </div>
+                    
+                    <!-- Time Limit Settings -->
+                    <div class="space-y-2">
+                        <label class="flex items-center justify-between text-white">
+                            Time Limit
+                            <div class="relative inline-block w-12 h-6">
+                                <input type="checkbox" id="timeLimit" 
+                                    class="peer sr-only" ${settings.timeLimit ? 'checked' : ''}>
+                                <div class="absolute inset-0 bg-gray-600 rounded-full transition peer-checked:bg-green-500"></div>
+                                <div class="absolute inset-y-1 start-1 w-4 h-4 bg-white rounded-full transition-all peer-checked:start-7"></div>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             </div>
         `;
@@ -82,6 +95,31 @@ export class SettingsPopup {
                 Object.keys(this.app.audioManager.sounds).forEach(sound => {
                     this.app.audioManager.stopSound(sound);
                 });
+            }
+        });
+
+        // Time limit toggle
+        const timeLimit = this.element.querySelector('#timeLimit');
+        timeLimit?.addEventListener('change', (e) => {
+            this.app.config.settings.timeLimit = e.target.checked;
+            this.app.config.saveToStorage();
+            
+            // If in game view, handle timer state immediately
+            if (this.app.currentView && this.app.currentView.constructor.name === 'GameView') {
+                if (!e.target.checked && this.app.currentView.timer) {
+                    // Stop timer immediately when disabled
+                    clearInterval(this.app.currentView.timer);
+                    this.app.currentView.timer = null;
+                    
+                    // Update timer display
+                    const timerElement = this.app.currentView.container.querySelector('#timer');
+                    if (timerElement) {
+                        timerElement.textContent = 'No Limit';
+                    }
+                } else if (e.target.checked && !this.app.currentView.timer) {
+                    // Start timer when enabled (if not already running)
+                    this.app.currentView.startTimer();
+                }
             }
         });
     }
