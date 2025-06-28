@@ -15,6 +15,7 @@ export class GameView {
     this.grid = [];
     this.foundWords = new Set();
     this.foundWordPositions = new Map(); // Store positions for found words
+    this.allWordPositions = new Map(); // Store positions for all words
     this.selection = {
       start: null,
       current: null,
@@ -32,6 +33,7 @@ export class GameView {
     this.words = this.generateWords();
     this.grid = this.generateGrid();
 
+    this.findAllWordPositions();
     this.render();
     this.addEventListeners();
     if (this.app.config.settings.timeLimit) {
@@ -390,6 +392,67 @@ export class GameView {
     return word;
   }
 
+  findAllWordPositions() {
+    if (!this.words || !this.grid) return;
+    
+    this.allWordPositions.clear();
+    const size = this.difficulty.size;
+    
+    // Check all words in the grid
+    this.words.forEach(word => {
+      for (let row = 0; row < size; row++) {
+        for (let col = 0; col < size; col++) {
+          const directions = [
+            [0, 1],   // right
+            [1, 0],   // down
+            [1, 1],   // diagonal down-right
+            [-1, 1],  // diagonal up-right
+            [0, -1],  // left
+            [-1, 0],  // up
+            [-1, -1], // diagonal up-left
+            [1, -1],  // diagonal down-left
+          ];
+
+          for (const [dx, dy] of directions) {
+            let found = true;
+            let cells = [];
+
+            for (let i = 0; i < word.length; i++) {
+              const newRow = row + dy * i;
+              const newCol = col + dx * i;
+
+              if (
+                newRow < 0 ||
+                newRow >= size ||
+                newCol < 0 ||
+                newCol >= size ||
+                this.grid[newRow][newCol] !== word[i]
+              ) {
+                found = false;
+                break;
+              }
+
+              cells.push([newRow, newCol]);
+            }
+
+            if (found) {
+              this.allWordPositions.set(word, cells);
+              break; // Found the word, no need to check other directions
+            }
+          }
+          
+          if (this.allWordPositions.has(word)) {
+            break; // Found the word, no need to check other starting positions
+          }
+        }
+        
+        if (this.allWordPositions.has(word)) {
+          break; // Found the word, no need to check other rows
+        }
+      }
+    });
+  }
+
   showHint() {
     if (this.hints <= 0) return;
 
@@ -632,6 +695,23 @@ export class GameView {
   }
 
   handleTimeout() {
+    // Highlight unfound words in light yellow
+    const unfoundWords = this.words.filter(word => !this.foundWords.has(word));
+    
+    unfoundWords.forEach(word => {
+      const positions = this.allWordPositions.get(word);
+      if (positions) {
+        positions.forEach(([row, col]) => {
+          const cell = this.container.querySelector(
+            `[data-row="${row}"][data-col="${col}"]`
+          );
+          if (cell) {
+            cell.classList.add("bg-yellow-200");
+          }
+        });
+      }
+    });
+
     setTimeout(() => {
       alert("⏰ Time's up! Try again!");
       this.destroy();
