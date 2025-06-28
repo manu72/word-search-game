@@ -203,10 +203,10 @@ export class GameView {
 
                 <!-- Game Grid -->
                 <div class="flex-1 flex items-center justify-center p-2">
-                    <div class="grid grid-cols-${size} gap-0.5 w-full max-w-[min(90vw,90vh)] aspect-square">
+                    <div class="grid grid-cols-${size} gap-0.5 w-full max-w-[min(90vw,90vh)] md:max-w-md lg:max-w-lg xl:max-w-xl aspect-square">
                         ${this.grid.map((row, i) => row.map((cell, j) => `
                             <div class="cell aspect-square flex items-center justify-center 
-                                      text-sm sm:text-base font-bold text-white bg-gray-800 rounded
+                                      text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white bg-gray-800 rounded
                                       cursor-pointer select-none transition-colors
                                       hover:bg-gray-700 active:bg-gray-600"
                                  data-row="${i}" data-col="${j}">
