@@ -14,7 +14,6 @@ export class Config {
         "KOALA",
         "CHEETAH",
         "GORILLA",
-        "RHINOCEROS",
         "BEAR",
         "WOLF",
         "FOX",
@@ -22,19 +21,28 @@ export class Config {
         "OWL",
         "SNAKE",
         "CROCODILE",
+        "RHINOCEROS",
+        "CHAMELEON",
+        "HEDGEHOG",
+        "PORCUPINE",
+        "STINGRAY",
+        "ARMADILLO",
+        "JELLYFISH",
+        "ANTEATER",
+        "CAPYBARA",
+        "SALAMANDER",
+        "WOLVERINE",
         "ALLIGATOR",
         "ANTELOPE",
         "BADGER",
         "BISON",
         "CAMEL",
-        "CHAMELEON",
         "DEER",
         "DINGO",
         "FALCON",
         "FLAMINGO",
         "GECKO",
         "HAMSTER",
-        "HEDGEHOG",
         "HIPPO",
         "HORSE",
         "IGUANA",
@@ -52,14 +60,12 @@ export class Config {
         "PARROT",
         "PEACOCK",
         "PLATYPUS",
-        "PORCUPINE",
         "RABBIT",
         "RACCOON",
         "SEAL",
         "SHARK",
         "SLOTH",
         "SQUIRREL",
-        "STINGRAY",
         "TOUCAN",
         "TURTLE",
         "WALRUS",
@@ -67,7 +73,6 @@ export class Config {
         "WHALE",
         "YAK",
         "ALPACA",
-        "ARMADILLO",
         "BABOON",
         "BUFFALO",
         "CHIPMUNK",
@@ -75,18 +80,13 @@ export class Config {
         "GAZELLE",
         "HYENA",
         "IMPALA",
-        "JELLYFISH",
         "MEERKAT",
         "NARWHAL",
         "OCELOT",
         "PIRANHA",
         "QUOKKA",
-        "SALAMANDER",
         "TAPIR",
         "VULTURE",
-        "WOLVERINE",
-        "ANTEATER",
-        "CAPYBARA",
         "FERRET",
         "MANATEE",
         "OPOSSUM",
@@ -111,20 +111,26 @@ export class Config {
         "KOREA",
         "TURKEY",
         "AOTEAROA",
-        "SWEDEN",
-        "IRELAND",
         "PHILIPPINES",
         "AFGHANISTAN",
         "LUXEMBOURG",
-        "BELGIUM",
         "MAURITIUS",
         "MADAGASCAR",
+        "NETHERLANDS",
+        "NICARAGUA",
+        "BANGLADESH",
+        "KAZAKHSTAN",
+        "LITHUANIA",
+        "MACEDONIA",
+        "SINGAPORE",
+        "SWITZERLAND",
+        "SWEDEN",
+        "IRELAND",
+        "BELGIUM",
         "MALAYSIA",
         "MALDIVES",
         "MALI",
         "MALTA",
-        "NETHERLANDS",
-        "NICARAGUA",
         "NIGERIA",
         "NORWAY",
         "PAKISTAN",
@@ -136,7 +142,6 @@ export class Config {
         "YEMEN",
         "ARGENTINA",
         "AUSTRIA",
-        "BANGLADESH",
         "BOLIVIA",
         "BOTSWANA",
         "BULGARIA",
@@ -167,15 +172,12 @@ export class Config {
         "ISRAEL",
         "JAMAICA",
         "JORDAN",
-        "KAZAKHSTAN",
         "KENYA",
         "KUWAIT",
         "LAOS",
         "LATVIA",
         "LEBANON",
         "LIBYA",
-        "LITHUANIA",
-        "MACEDONIA",
         "MOROCCO",
         "MYANMAR",
         "NEPAL",
@@ -186,12 +188,10 @@ export class Config {
         "RUSSIA",
         "SENEGAL",
         "SERBIA",
-        "SINGAPORE",
         "SLOVAKIA",
         "SLOVENIA",
         "SOMALIA",
         "SUDAN",
-        "SWITZERLAND",
         "SYRIA",
         "TAIWAN",
         "TANZANIA",
@@ -224,22 +224,33 @@ export class Config {
         "GUAVA",
         "CALAMANSI",
         "BERRY",
+        "WATERMELON",
+        "CANTALOUPE",
+        "STRAWBERRY",
+        "BLACKBERRY",
+        "GRAPEFRUIT",
+        "TANGERINE",
+        "CLEMENTINE",
+        "POMEGRANATE",
+        "BREADFRUIT",
+        "CHERIMOYA",
+        "PERSIMMON",
+        "ELDERBERRY",
+        "GOOSEBERRY",
+        "BOYSENBERRY",
+        "LOGANBERRY",
+        "CLOUDBERRY",
+        "HUCKLEBERRY",
+        "NECTARINE",
         "APRICOT",
         "AVOCADO",
         "PINEAPPLE",
-        "WATERMELON",
-        "CANTALOUPE",
         "HONEYDEW",
-        "STRAWBERRY",
         "BLUEBERRY",
         "RASPBERRY",
-        "BLACKBERRY",
         "CRANBERRY",
-        "GRAPEFRUIT",
         "TANGERINE",
         "MANDARIN",
-        "CLEMENTINE",
-        "POMEGRANATE",
         "KIWI",
         "PASSION",
         "DRAGON",
@@ -248,24 +259,14 @@ export class Config {
         "RAMBUTAN",
         "DURIAN",
         "JACKFRUIT",
-        "BREADFRUIT",
         "CUSTARD",
         "SOURSOP",
-        "CHERIMOYA",
         "ATEMOYA",
-        "PERSIMMON",
         "QUINCE",
-        "ELDERBERRY",
-        "GOOSEBERRY",
         "CURRANT",
         "MULBERRY",
-        "BOYSENBERRY",
-        "LOGANBERRY",
-        "CLOUDBERRY",
-        "HUCKLEBERRY",
         "ACAI",
         "GOJI",
-        "NECTARINE",
         "PLANTAIN",
         "TAMARIND",
         "POMELO",
@@ -310,12 +311,23 @@ export class Config {
         "SOCCER",
         "TENNIS",
         "EQUESTRIAN",
+        "SNOWBOARDING",
+        "KITESURFING",
+        "TRIATHLON",
+        "GYMNASTICS",
+        "WINDSURFING",
+        "PARAGLIDING",
+        "ROCKCLIMBING",
+        "ICESKATING",
+        "CHEERLEADING",
+        "STEEPLECHASE",
+        "HEPTATHLON",
+        "PENTATHLON",
+        "CROSSCOUNTRY",
         "RUGBY",
         "BOBSLEIGH",
         "HOCKEY",
         "BOXING",
-        "SNOWBOARDING",
-        "KITESURFING",
         "CYCLING",
         "RUNNING",
         "SWIMMING",
@@ -323,7 +335,6 @@ export class Config {
         "ROWING",
         "JUDO",
         "KARATE",
-        "TRIATHLON",
         "ARCHERY",
         "FENCING",
         "POLO",
@@ -333,13 +344,10 @@ export class Config {
         "FOOTBALL",
         "GOLF",
         "WRESTLING",
-        "GYMNASTICS",
-        "WEIGHTLIFTING",
         "MARATHON",
         "SAILING",
         "SURFING",
         "SKIING",
-        "SKATEBOARDING",
         "CLIMBING",
         "HIKING",
         "FISHING",
@@ -360,12 +368,6 @@ export class Config {
         "RAFTING",
         "KAYAKING",
         "CANOEING",
-        "WINDSURFING",
-        "PARAGLIDING",
-        "MOUNTAINEERING",
-        "ROCKCLIMBING",
-        "ICESKATING",
-        "ROLLERBLADING",
         "MOTOCROSS",
         "RACING",
         "KARTING",
@@ -377,7 +379,6 @@ export class Config {
         "AEROBICS",
         "ZUMBA",
         "SPINNING",
-        "CHEERLEADING",
         "DANCING",
         "BALLET",
         "ULTIMATE",
@@ -386,10 +387,7 @@ export class Config {
         "SHOTPUT",
         "HAMMER",
         "HURDLES",
-        "STEEPLECHASE",
         "DECATHLON",
-        "HEPTATHLON",
-        "PENTATHLON",
         "BIATHLON",
         "LUGE",
         "SKELETON",
@@ -397,7 +395,6 @@ export class Config {
         "FREESTYLE",
         "SLALOM",
         "SNOWSHOE",
-        "CROSSCOUNTRY",
         "TELEMARK",
       ],
       colours: [
@@ -445,6 +442,8 @@ export class Config {
         "COBALT",
         "ROYAL",
         "PERIWINKLE",
+        "CHARTREUSE",
+        "CHAMPAGNE",
         "LAVENDER",
         "LILAC",
         "PLUM",
@@ -498,9 +497,7 @@ export class Config {
         "BANANA",
         "BUTTER",
         "CREAM",
-        "CHAMPAGNE",
         "CITRINE",
-        "CHARTREUSE",
         "SPRING",
         "SEAFOAM",
         "AQUA",
@@ -530,7 +527,6 @@ export class Config {
         "TAPSILOG",
         "SOUP",
         "RICE",
-        "BANANARITO",
         "CAKE",
         "CHIPS",
         "FISH",
@@ -538,12 +534,14 @@ export class Config {
         "ADOBO",
         "SINIGANG",
         "HALOHALO",
+        "QUESADILLA",
+        "ENCHILADA",
+        "SPRINGROLL",
+        "SAUERKRAUT",
         "AMPALAYA",
         "TACOS",
         "BURRITO",
-        "QUESADILLA",
         "NACHOS",
-        "ENCHILADA",
         "RAMEN",
         "TEMPURA",
         "MISO",
@@ -591,7 +589,6 @@ export class Config {
         "CREPE",
         "QUICHE",
         "FONDUE",
-        "SAUERKRAUT",
         "PIEROGI",
         "BORSCHT",
         "CAVIAR",
@@ -604,7 +601,6 @@ export class Config {
         "DUMPLINGS",
         "NOODLES",
         "WONTONS",
-        "SPRINGROLL",
         "SATAY",
         "LAKSA",
         "RENDANG",
@@ -656,8 +652,8 @@ export class Config {
       name: "Camille",
       specialMessageFrequency: {
         min: 3,
-        max: 9
-      }
+        max: 9,
+      },
     };
 
     this.loadFromStorage();
@@ -689,7 +685,7 @@ export class Config {
     }
     return {
       count: 0,
-      nextSpecialMessage: this.getRandomSpecialMessageTrigger()
+      nextSpecialMessage: this.getRandomSpecialMessageTrigger(),
     };
   }
 
@@ -704,18 +700,26 @@ export class Config {
 
   getDaysUntilBirthday() {
     const today = new Date();
-    const birthdayParts = this.birthday.date.split('-');
+    const birthdayParts = this.birthday.date.split("-");
     const birthdayYear = parseInt(birthdayParts[0]);
     const birthdayMonth = parseInt(birthdayParts[1]) - 1; // Month is 0-indexed
     const birthdayDay = parseInt(birthdayParts[2]);
-    
-    let birthdayThisYear = new Date(today.getFullYear(), birthdayMonth, birthdayDay);
-    
+
+    let birthdayThisYear = new Date(
+      today.getFullYear(),
+      birthdayMonth,
+      birthdayDay
+    );
+
     // If birthday has already passed this year, calculate for next year
     if (birthdayThisYear < today) {
-      birthdayThisYear = new Date(today.getFullYear() + 1, birthdayMonth, birthdayDay);
+      birthdayThisYear = new Date(
+        today.getFullYear() + 1,
+        birthdayMonth,
+        birthdayDay
+      );
     }
-    
+
     const timeDiff = birthdayThisYear.getTime() - today.getTime();
     return Math.ceil(timeDiff / (1000 * 3600 * 24));
   }
@@ -723,17 +727,18 @@ export class Config {
   getWinMessage() {
     const completionData = this.getCompletionData();
     completionData.count++;
-    
+
     let message = "🎉 Congratulations! You found all the words!";
     let isSpecialMessage = false;
-    
+
     if (completionData.count >= completionData.nextSpecialMessage) {
       const daysUntil = this.getDaysUntilBirthday();
       message = `🎉 Congratulations! You found all the words! Did you know that it is only ${daysUntil} days until ${this.birthday.name}'s birthday?`;
-      completionData.nextSpecialMessage = completionData.count + this.getRandomSpecialMessageTrigger();
+      completionData.nextSpecialMessage =
+        completionData.count + this.getRandomSpecialMessageTrigger();
       isSpecialMessage = true;
     }
-    
+
     this.saveCompletionData(completionData);
     return { message, isSpecialMessage };
   }
