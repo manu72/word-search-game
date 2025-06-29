@@ -169,7 +169,6 @@ export class Config {
         "INDONESIA",
         "IRAN",
         "IRAQ",
-        "ISRAEL",
         "JAMAICA",
         "JORDAN",
         "KENYA",
