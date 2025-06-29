@@ -86,6 +86,7 @@ export class GameView {
 
     // Sort words by length (longest first)
     const sortedWords = [...this.words].sort((a, b) => b.length - a.length);
+    const placedWords = []; // Track successfully placed words
 
     // Possible directions for word placement
     const directions = [
@@ -103,7 +104,7 @@ export class GameView {
     for (const word of sortedWords) {
       let placed = false;
       let attempts = 0;
-      const maxAttempts = 100; // Prevent infinite loops
+      const maxAttempts = 200; // Increased attempts for better placement success
 
       while (!placed && attempts < maxAttempts) {
         attempts++;
@@ -171,14 +172,19 @@ export class GameView {
             grid[newX][newY] = word[i];
           });
           placed = true;
+          placedWords.push(word);
+          console.log(`Successfully placed word: ${word}`);
         }
       }
 
       if (!placed) {
-        console.warn(`Could not place word: ${word}`);
-        // Continue with next word instead of returning null
+        console.warn(`Could not place word: ${word} after ${maxAttempts} attempts`);
       }
     }
+
+    // CRITICAL FIX: Update this.words to only contain successfully placed words
+    this.words = placedWords;
+    console.log(`Grid generation complete. Placed ${placedWords.length} out of ${sortedWords.length} words`);
 
     // Fill empty spaces with random letters
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -718,7 +724,7 @@ export class GameView {
             `[data-row="${row}"][data-col="${col}"]`
           );
           if (cell) {
-            cell.classList.add("bg-yellow-200");
+            cell.classList.add("bg-yellow-400");
           }
         });
       }
