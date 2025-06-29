@@ -180,6 +180,7 @@ export class Config {
         "MOROCCO",
         "MYANMAR",
         "NEPAL",
+        "PALESTINE",
         "POLAND",
         "PORTUGAL",
         "QATAR",
